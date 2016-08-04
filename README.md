@@ -9,7 +9,7 @@ To get started, check out the repository, inspect the code,
 
 Optimizations Performed to meet specifications:
 
-index.html:
+index.html (main page):
 Inline CSS
 Minimize pizzeria image size & made it png
 async JS
