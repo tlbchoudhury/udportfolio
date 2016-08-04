@@ -13,7 +13,7 @@ index.html (main page):
 Inline CSS
 Minimize pizzeria image size & made it png
 async JS
-Added media= "print" for print.css
+Added media= "print" for print.css so that CSS gets triggered only when device is PRINT
 commented out google font link
 
 main.js for pizzaria: 
