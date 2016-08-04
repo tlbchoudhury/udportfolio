@@ -6,13 +6,54 @@ To get started, check out the repository, inspect the code,
 
 ### Getting started
 
+
+Optimizations Performed to meet specifications:
+
+index.html:
+Inline CSS
+Minimize pizzeria image size & made it png
+async JS
+Added media= "print" for print.css
+commented out google font link
+
+main.js for pizzaria: 
+  changed pizza size values to percentage (line 457)
+  used document.getElementsByClassName() Web Api instead of document.querySelectorAll (line 468)
+  saved local variable randomPizzaContainer & randomPizzaContainersLength (line 468-469) outside the loop so the DOM is not touched in every iteration.
+
+  Decleared pizzasDiv variable outside the loop so only DOM call is made (line 488)
+
+  Reduced the number of background pizzas to 24 (line 544).
+
+CSS for pizzaria (style.css)
+Added transform:translateZ(0) under the class mover to increase site performance
+
+Gulp Build Steps:
+
+Check installation of node js by running: npm -v
+  -v can be used to check if gulp is installed
+Install Gulp
+npm install --global --save-dev gulp
+
+Then, install it in your project:
+npm install --save-dev gulp
+
+To minify js:
+install gulp-uglify: npm install gulp-uglify --save-dev
+
+To minify html & css:
+run: npm install gulp-htmlmin --save-dev
+
+Run gulp command from root directory of the project to get the project built
+
+
 Some useful tips to help you get started:
 
 1. Check out the repository
 1. To inspect the site on your phone, you can run a local server
 
   ```bash
-  $> cd /path/to/your-project-folder
+  $> cd /path/to/your-project-folder/build
   $> python -m SimpleHTTPServer 8080
   ```
 
@@ -20,7 +61,7 @@ Some useful tips to help you get started:
 1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
   ``` bash
-  $> cd /path/to/your-project-folder
+  $> cd /path/to/your-project-folder/build
   $> ngrok 8080
   ```
 
@@ -63,3 +104,5 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+
+
